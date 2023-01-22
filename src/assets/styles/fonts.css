@@ -1,0 +1,350 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url('../fonts/lato-black-webfont.woff2') format('woff2'),
+       url('../fonts/lato-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Black Italic';
+  src: url('../fonts/lato-blackitalic-webfont.woff2') format('woff2'),
+       url('../fonts/lato-blackitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+       url('../fonts/lato-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Bold Italic';
+  src: url('../fonts/lato-bolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/lato-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('../fonts/lato-hairline-webfont.woff2') format('woff2'),
+       url('../fonts/lato-hairline-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Italic';
+  src: url('../fonts/lato-italic-webfont.woff2') format('woff2'),
+       url('../fonts/lato-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('../fonts/lato-light-webfont.woff2') format('woff2'),
+       url('../fonts/lato-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Light Italic';
+  src: url('../fonts/lato-lightitalic-webfont.woff2') format('woff2'),
+       url('../fonts/lato-lightitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+       url('../fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Thin';
+  src: url('../fonts/lato-thin-webfont.woff2') format('woff2'),
+       url('../fonts/lato-thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Lato Thin Italic';
+  src: url('../fonts/lato-thinitalic-webfont.woff2') format('woff2'),
+       url('../fonts/lato-thinitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Raleway Black';
+  src: url('../fonts/raleway-black-webfont.woff2') format('woff2'),
+       url('../fonts/raleway-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+/*******************/
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Lato Medium';
+  src: url('../fonts/Lato-Medium.ttf');
+}
+@font-face {
+font-weight: normal;
+font-style: italic;
+font-family: 'Lato Medium Italic';
+src: url('../fonts/Lato-MediumItalic.ttf');
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Lato SemiBold';
+  src: url('../fonts/Lato-SemiBold.ttf');
+}
+@font-face {
+font-weight: normal;
+font-style: italic;
+font-family: 'Lato SemiBold Italic';
+src: url('../fonts/Lato-SemiBoldItalic.ttf');
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Lato ExtraLight';
+  src: url('../fonts/Lato-ExtraLight.ttf');
+}
+@font-face {
+font-weight: normal;
+font-style: italic;
+font-family: 'Lato ExtraLight Italic';
+src: url('../fonts/Lato-ExtraLightItalic.ttf');
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Lato ExtraBold';
+  src: url('../fonts/Lato-ExtraBold.ttf');
+}
+@font-face {
+font-weight: normal;
+font-style: italic;
+font-family: 'Lato ExtraBold Italic';
+src: url('../fonts/Lato-ExtraBoldItalic.ttf');
+}
+
+/* @font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Lato Black';
+  src: url('../fonts/Lato-Black.ttf');
+}
+@font-face {
+font-weight: normal;
+font-style: italic;
+font-family: 'Lato Black Italic';
+src: url('../fonts/Lato-BlackItalic.ttf');
+}
+
+
+ @font-face {
+    font-weight: bolder;
+    font-family: 'Lato Bold';
+    src: url('../fonts/Lato-Bold.ttf');
+}
+@font-face {
+  font-weight: normal;
+  font-style: italic;
+  font-family: 'Lato Bold Italic';
+  src: url('../fonts/Lato-BoldItalic.ttf');
+  } */
+
+/* @font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Lato Regular';
+    src: url('../fonts/Lato-Regular.ttf');
+} */
+/* @font-face {
+  font-weight: normal;
+  font-style: italic;
+  font-family: 'Lato Regular Italic';
+  src: url('../fonts/Lato-Italic.ttf');
+} */
+
+/* @font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Lato Thin';
+  src: url('../fonts/Lato-Thin.ttf');
+} */
+@font-face {
+font-weight: normal;
+font-style: italic;
+font-family: 'Lato Thin Italic';
+src: url('../fonts/Lato-ThinItalic.ttf');
+}
+
+/* @font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Lato Light';
+    src: url('../fonts/Lato-Light.ttf');
+}
+@font-face {
+  font-weight: normal;
+  font-style: italic;
+  font-family: 'Lato Light';
+  src: url('../fonts/Lato-LightItalic.ttf');
+} */
+
+@font-face {
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Lato Hairline';
+    src: url('../fonts/Lato-Hairline.ttf');
+}
+
+/* @font-face {
+    font-weight: normal;
+    font-family: 'Raleway Black';
+    src: url('../fonts/Raleway-Black.ttf');
+}*/
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Raleway Bold';
+    src: url('../fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Raleway ExtraBold';
+    src: url('../fonts/Raleway-ExtraBold.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-family: 'Raleway ExtraLight';
+    src: url('../fonts/Raleway-ExtraLight.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-family: 'Raleway Light';
+    src: url('../fonts/Raleway-Light.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Raleway Regular';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Raleway SemiBold';
+    src: url('../fonts/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Raleway Thin';
+    src: url('../fonts/Raleway-Thin.ttf');
+}
+
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Courgette';
+    src: url('../fonts/Courgette-Regular.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'PFD';
+    src: url('../fonts/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'PFD Black';
+    src: url('../fonts/PlayfairDisplay-Black.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'PFD Italic';
+    src: url('../fonts/PlayfairDisplay-BlackItalic.ttf');
+}

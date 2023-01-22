@@ -1,0 +1,141 @@
+body {
+  margin: 0 auto;
+  font-family: "Lato Regular", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #dfdfdf;
+  background: blue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #707070;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+
+::-webkit-selection { /* Code for Firefox */
+  color: #03e4ea;
+  background: #222}
+::-moz-selection { /* Code for Firefox */
+  color: #03e4ea;
+  background: #222}
+::o-selection { /* Code for Firefox */
+  color: #03e4ea;
+  background: #222}
+
+::selection {
+  color: #03e4ea;
+  background: #222}
+
+
+
+.shadow1 {
+  background: linear-gradient(0.4turn, rgba(255, 255, 255,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+
+
+
+/* Close Button */
+
+[class*="close-"] {
+  color: #808080;
+  font: 3em/120% arial, sans-serif;
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #000;
+  top: 10px;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  text-align: center;
+}
+
+.close-classic:after {
+  content: "X";
+  /* ANSI X letter */
+}
+
+.close-thin:after {
+  content: "×";
+  /* UTF-8 symbol */
+}
+.close-thin-1:after {
+  content: "╳";
+}
+.close-thin-2:after {
+  content: "☓";
+}
+.close-thin-3:after {
+  content: "✕";
+}
+.close-thin-4:after {
+  content: "✖";
+}
+
+.close-thik:after {
+  content: "✖";
+  /* UTF-8 symbol */
+}
+
+.close:hover {
+  color: #fff;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  /* color: red; */
+  /* opacity: 1; Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  /* color: red; */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  /* color: red; */
+}
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
