@@ -1,1 +1,108 @@
-#mainApp {}
+#mainApp {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: table;
+    position: relative;
+    z-index: 1;
+
+
+    /*********************** PGS1 *************************/
+    .pgs1 {
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+        display: table;
+        position: relative;
+
+        .pg-sect1 {
+            margin: 0 auto;
+            width: 100%;
+            height: 100vh;
+            display: table;
+            position: relative;
+            // border: 5px solid #abef05;
+            margin-bottom: 100px;
+        }
+    }
+    /*********************** PGS1 END *************************/
+
+
+}
+
+
+
+
+
+/*
+LARGER MOBILE DEVICES
+This is for mobile devices with a bit larger screens.
+*/
+
+@media only screen and (min-width: 481px) {
+}
+
+@media all and (min-width: 760px) {
+
+
+}
+
+
+/*
+TABLET & SMALLER LAPTOPS
+The average viewing window and preferred media query for those is 768px.
+But I think that some more breathing space is good:)
+*/
+
+@media only screen and (min-width: 920px) {}
+
+
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+
+@media only screen and (min-width: 1030px) {
+
+}
+
+
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+
+@media all and (min-width: 1162px) {
+
+}
+
+@media only screen and (min-width: 1240px) {  
+}
+
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with mainHeaderBgTxt
+other displays with a 2x resolution.
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
+
+
+/*
+iPHONE 5 MEDIA QUERY
+iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
+*/
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+/*
+PRINT STYLESHEET
+*/
+
+@media print {}

@@ -2,8 +2,349 @@
     margin: 0 auto;
     width: 100%;
     height: auto;
-    min-height: 60px;
+    min-height: 60px;    
     display: flex;
     position: relative;
-    background: teal;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index: 100; 
+
+    .mainHeader {
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        justify-content: space-between;
+        text-align: left;
+        position: relative;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        // border: 2px solid blue;
+
+        .mainLogo{
+            flex-basis: 50px;
+            height: 50px;
+            a {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                display: block;
+                position: relative;
+                float: left;
+            }
+        }
+
+        .mainMenu {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            display: none;
+            margin-top: 10px;
+            // border: 2px solid brown;
+
+            a{
+                margin: 0 auto;
+                width: 100%;
+                height: 40px;
+                padding: 0px 15px;
+                text-align: center;
+                font-weight: bold;
+                background: #8e59fd;
+                color: #dfdfdf;
+                position: relative;
+                // border: 2px solid yellow;
+                font-size: 0.85em;
+                z-index: 1;
+
+                -webkit-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                -moz-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                -ms-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+                .label {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: 100%;
+                    // background: #dfdfdf;
+                    // border: 2px solid orange;
+                    padding-top: 10px;
+                    position: absolute;
+                    top: 0; left: 0;
+                    z-index: 0;
+
+                    -webkit-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    -moz-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    -ms-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+
+            }
+            
+            .leftMenu {
+                flex-basis: 60%;
+                height: auto;
+                // border: 2px solid green;
+                display: flex;
+
+                a:first-child {
+                    border-radius: 60px 0 0 60px;
+                    -o-border-radius: 60px 0 0 60px;
+                    -moz-border-radius: 60px 0 0 60px;
+                    -webkit-border-radius: 60px 0 0 60px;
+                }
+                
+
+                a {
+                    border-left: 0.5px solid #976cf500;
+                    border-right: 0.5px solid #976cf500;
+                    
+                    -webkit-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    -moz-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    -ms-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                    
+                    .label {
+                    }
+    
+                }
+                a:hover {
+                    border-left: 0.5px solid #ae8bf8;
+                    border-right: 0.5px solid #ae8bf8;
+                    color: #fff;
+    
+                    .label {
+                    }
+    
+                }
+                a:last-child:hover {
+                    border-left: 0.5px solid #ae8bf8;
+                    border-right: transparent;
+                    .label {
+                    }
+    
+                }
+            }
+            .rightMenu {
+                flex-basis: 40%;
+                height: 50px;
+                border: 0.5px solid #dfdfdf;
+                background: #fff;
+                display: flex;
+                justify-content: space-between;
+                margin-top: -5px;
+
+                border-radius: 100px;
+                -o-border-radius: 100px;
+                -moz-border-radius: 100px;
+                -webkit-border-radius: 100px;
+
+                overflow: hidden;
+
+                -webkit-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                -moz-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                -ms-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+                transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+                a {
+                    height: 100%;
+                    .label {
+                        padding-top: 12px;
+                    }
+                }
+                a.cartBtn {
+                    flex-basis: 100px;
+                    height: 100%;
+                    background: transparent;
+                    // border: 2px solid blue;
+                    margin-left: 5%;
+                    padding: 10px 5px;
+                    svg {
+                        margin: 0 auto;
+                        width: 90%;
+                        height: auto;
+                        display: block;
+                        position: relative;
+                        // border: 2px solid purple;
+                    }
+                }
+                a.loginBtn {
+                    flex-basis: 1;
+                    background: transparent;
+                    color: #8e59fd;
+                }
+                a.getStartedBtn {
+                    flex-basis: 1;
+                    border-radius: 60px 0 0 60px;
+                    -o-border-radius: 60px 0 0 60px;
+                    -moz-border-radius: 60px 0 0 60px;
+                    -webkit-border-radius: 60px 0 0 60px;
+                }
+            }
+            
+            
+        }
+        .mobileMenu {
+            flex-basis: 40px;
+            height: 40px;
+            background: #8e59fd;
+            // border: 2px solid orange;
+            border-radius: 50%;
+            -o-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            cursor: pointer;
+            .iconV1 {
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5px;
+                padding: 5px;
+            }
+        }
+
+    }
 }
+
+
+
+/*
+LARGER MOBILE DEVICES
+This is for mobile devices with a bit larger screens.
+*/
+
+@media only screen and (min-width: 481px) {
+    #header {
+    
+        .mainHeader {
+    
+            .mainLogo{
+                flex-basis: 40%;
+                height: 40px;
+                a {
+                }
+            }
+    
+            .mainMenu {
+            }
+            .mobileMenu {
+            }
+    
+        }
+    }
+}
+
+@media all and (min-width: 760px) {
+    #header {
+    
+        .mainHeader {
+    
+            .mainLogo{
+                
+            }
+    
+            .mainMenu {
+            }
+
+            .mobileMenu {
+            }
+    
+        }
+    }
+
+}
+
+
+/*
+TABLET & SMALLER LAPTOPS
+The average viewing window and preferred media query for those is 768px.
+But I think that some more breathing space is good:)
+*/
+
+@media only screen and (min-width: 920px) {}
+
+
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+
+@media only screen and (min-width: 1030px) {
+
+}
+
+
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+
+@media all and (min-width: 1162px) {
+
+}
+
+@media only screen and (min-width: 1240px) {  
+
+    #header {
+    
+        .mainHeader {
+    
+            .mainLogo{
+                flex-basis: 25%;
+                height: 70px;
+                
+            }
+    
+            .mainMenu {
+                flex-basis: 75%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .mobileMenu {
+                display: none;
+            }
+    
+        }
+    }
+
+
+}
+
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with mainHeaderBgTxt
+other displays with a 2x resolution.
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
+
+
+/*
+iPHONE 5 MEDIA QUERY
+iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
+*/
+
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+/*
+PRINT STYLESHEET
+*/
+
+@media print {}

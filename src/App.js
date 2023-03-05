@@ -1,29 +1,29 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import React, { useState, useContext, useRef, useEffect } from 'react';
+import React, { useState, useContext, useRef, useEffect, useReducer } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './components/shared/AppRoutes';
 import './App.scss';
-import Header from './components/shared/header/header';
-import Footer from './components/shared/footer/footer';
 
-export const ThemeContext1 = React.createContext();
+const mainAppReducer = (appState, appActions) => {
+  switch(appActions.type) {
+    
+  }
+}
 
 function App() {
   const [themeVars, setThemeVars] = useState({ colors: ['#dfdfdf', '#171717'] });
 
+  const initialAppState = { colors: ['#dfdfdf', '#171717'] };
+  const [mainAppState, dispatch] = useReducer(mainAppReducer, initialAppState);
+
   return (
-    <ThemeContext1.Provider value={ themeVars } >
-      <ChakraProvider>
+    <ChakraProvider>
+      <BrowserRouter>
 
-      <Header />
+      <AppRoutes />   
 
-      <div id="mainApp">
-        <AppRoutes />
-      </div>
-
-      <Footer />
-
-      </ChakraProvider>
-    </ThemeContext1.Provider>
+      </BrowserRouter>
+    </ChakraProvider>
   );
 }
 

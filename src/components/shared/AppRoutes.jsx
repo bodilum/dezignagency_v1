@@ -1,7 +1,11 @@
-import React from 'react';
-import { Route, Routes, BrowserRouter, Navigate, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Route, Routes, Navigate, Link, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 ////////////////// IMPORT PAGES //////////////////////////////////////
+
+import Header from './header/header';
+// import Footer from './footer/footer';
 
 import Home from '../Home';
 import Buy from '../public/buy/Buy';
@@ -23,29 +27,57 @@ import WhyUs from '../public/WhyUs';
 import Signup from './signup/Signup';
 import Login from './login/Login';
 import RecoverAccount from './recover-account/RecoverAccount';
+import BgDesign from './bg-design/bgDesign';
+import { HeaderMenuProvider } from '../../contexts/header-menu/header-menu-context';
+
+
 
 ////////////////// IMPORT PAGES END //////////////////////////////////////
 
 
 export default function AppRoutes() {
+
+  const location = useLocation();
+
+  const [dynComp, setDynComp] = useState({ Footer: null })
+
+  async function dynLoadComp() {
+    const { Footer } = await import('./footer/footer');
+    setDynComp( prev => ({ ...prev, Footer }) );
+    console.log('Loading async component dynamically...', Footer);
+  }
+
+  // dynamically load component test
+  useEffect( () => {
+    dynLoadComp();
+  }, []);
+
   return (
-    <BrowserRouter>
+    
+    <>
+    <HeaderMenuProvider>
+      <Header />
+    </HeaderMenuProvider>
+        <div id="mainApp">
+        <Routes location={location} key={location.pathname}>
 
-        <Routes>
+          <Route path="/" element={ <Home /> }></Route>
+          <Route path="/home" element={ <Navigate to="/" /> }></Route>
+          
+          <Route path="/buy" element={ <Buy /> }></Route>
+          <Route path="/create" element={ <Create /> }></Route>
+          <Route path="/subscribe" element={ <Subscribe /> }></Route>
+          <Route path="/showcase" element={ <Showcase /> }></Route>
 
-            <Route path="/" element={ <Home /> }></Route>
-            <Route path="/home" element={ <Navigate to="/" /> }></Route>
-           
-            <Route path="/buy" element={ <Buy /> }></Route>
-            <Route path="/create" element={ <Create /> }></Route>
-            <Route path="/subscribe" element={ <Subscribe /> }></Route>
-            <Route path="/showcase" element={ <Showcase /> }></Route>
-
-            <Route path="/signup" element={ <Signup /> }></Route>
-            <Route path="/login" element={ <Login /> }></Route>
+          <Route path="/signup" element={ <Signup /> }></Route>
+          <Route path="/login" element={ <Login /> }></Route>
 
         </Routes>
-        
-    </BrowserRouter>
+        </div>
+    {/* <Footer /> */}
+    { dynComp.Footer || "Footer loading..." }
+    <BgDesign />
+    </>     
+    
   )
 }
