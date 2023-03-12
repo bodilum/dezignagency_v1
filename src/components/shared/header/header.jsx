@@ -14,6 +14,13 @@ import { useHeaderMenu, useHeaderMenuUpdate } from '../../../contexts/header-men
 
 
 const Header = () => {
+    const allMenuPos = {
+        home: 5, buy: 15, create: 25, subscribe: 35, showcase: 45, resources: 55, 
+        cart: 64.5, signin: 75, signup: 92
+    };
+    const [activeMenuPos, setActiveMenuPos] = useState( 5 );
+    const [menuDDState, setmenuDDState] = useState( false );
+
     const [userVars, setUserVars] = useState({ loggedIn: false });
     const [mobileMenuState, setMobileMenuState] = useState(false);
 
@@ -33,6 +40,8 @@ const Header = () => {
         setWinHeight(window.innerHeight);
         
     }
+
+    // function to setActiveMenuPo 
 
     // render this only once: the first time component mounts
     useEffect(() => {
@@ -85,19 +94,19 @@ const Header = () => {
                 </div>
                 <div className="mainMenu">
                     <div className="leftMenu">
-                        <Link to="/"><div className="label">Home</div></Link>
-                        <Link to="/buy"><div className="label">Buy</div></Link>
-                        <Link to="/create"><div className="label">Create</div></Link>
-                        <Link to="/subscribe"><div className="label">Subscribe</div></Link>
-                        <Link to="/showcase"><div className="label">Showcase</div></Link>
-                        <Link to="/resources"><div className="label">Resources</div></Link>
+                        <Link to="/" ><div className="label" onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.home ) } } onMouseOut={ () => { setmenuDDState(false); } } >Home</div></Link>
+                        <Link to="/buy"><div className="label" onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.buy ) } } onMouseOut={ () => { setmenuDDState(false); } } >Buy</div></Link>
+                        <Link to="/create"><div className="label" onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.create ) } } onMouseOut={ () => { setmenuDDState(false); } } >Create</div></Link>
+                        <Link to="/subscribe"><div className="label" onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.subscribe ) } } onMouseOut={ () => { setmenuDDState(false); } } >Subscribe</div></Link>
+                        <Link to="/showcase"><div className="label" onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.showcase ) } } onMouseOut={ () => { setmenuDDState(false); } } >Showcase</div></Link>
+                        <Link to="/resources"><div className="label" onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.resources ) } } onMouseOut={ () => { setmenuDDState(false); } } >Resources</div></Link>
                     </div>
                     <div className="rightMenu">
-                        <Link to="/cart" className='cartBtn'><IconV1 iconName="cart1" /></Link>
-                        <Link to="/login" className='loginBtn'><div className="label">Sign in</div></Link>
-                        <Link to="/signup" className='getStartedBtn'><div className="label">Get Started</div></Link>
+                        <Link to="/cart" className='cartBtn' onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.cart ) } } onMouseOut={ () => { setmenuDDState(false); } } ><IconV1 iconName="cart1" /></Link>
+                        <Link to="/login" className='loginBtn' onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.signin ) } } onMouseOut={ () => { setmenuDDState(false); } } ><div className="label">Sign in</div></Link>
+                        <Link to="/signup" className='getStartedBtn' onMouseOver={ () => { setmenuDDState(true); setActiveMenuPos( allMenuPos.signup ) } } onMouseOut={ () => { setmenuDDState(false); } } ><div className="label">Get Started</div></Link>
                     </div>        
-                    <MenuDD1 />           
+                    <MenuDD1 menuState={ menuDDState } menuPointerPos={ activeMenuPos } />           
                 </div>
                 <div className="mobileMenu"><IconV1 iconName='menuIcon1' /></div>
 

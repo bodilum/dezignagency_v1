@@ -11,6 +11,7 @@ import Home from '../Home';
 import Buy from '../public/buy/Buy';
 import Create from '../public/create/Create';
 import Showcase from '../public/showcase/Showcase';
+import Resources from '../public/resources/Resources';
 import Subscribe from '../public/subscribe/Subscribe';
 import About from '../public/About';
 import Blog from '../public/Blog';
@@ -71,6 +72,7 @@ export default function AppRoutes() {
 
           <Route path="/signup" element={ <Signup /> }></Route>
           <Route path="/login" element={ <Login /> }></Route>
+          <Route path="/resources" element={ <Resources /> }></Route>
 
         </Routes>
         </div>

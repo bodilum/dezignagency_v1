@@ -1,8 +1,11 @@
-import { ChakraProvider } from '@chakra-ui/react';
+
 import React, { useState, useContext, useRef, useEffect, useReducer } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './components/shared/AppRoutes';
 import './App.scss';
+
+
+import { ChakraProvider } from '@chakra-ui/react';
 
 const mainAppReducer = (appState, appActions) => {
   switch(appActions.type) {
@@ -18,11 +21,12 @@ function App() {
 
   return (
     <ChakraProvider>
+
       <BrowserRouter>
 
       <AppRoutes />   
-
       </BrowserRouter>
+      
     </ChakraProvider>
   );
 }

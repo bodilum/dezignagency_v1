@@ -1,10 +1,26 @@
 #mainMenuDD1 {
     margin: 0 auto;
-    width: 100%;
+    width: 100%; 
     height: auto;
     position: relative;
     display: block;
     z-index: 1;
+
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+    -ms-perspective: 600px;
+    -o-perspective: 600px;
+    perspective: 600px;
+
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+
+    -webkit-transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    -moz-transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    -ms-transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
     .menuContent {
         margin: 0 auto;
@@ -27,17 +43,42 @@
         -moz-box-shadow:    3px 40px 115px 1px rgba(0,0,0,0.3);  /* Firefox 3.5 - 3.6 */
         box-shadow:         3px 40px 115px 1px rgba(0,0,0,0.3);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+
 
         background: #fff;
         border: 1px solid #dfdfdf;
 
         margin-top: 7px;
 
-        -webkit-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        -moz-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        -ms-transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        -webkit-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        -moz-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        -ms-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+        -webkit-transform-origin: top center;
+        -moz-transform-origin: top center;
+        -ms-transform-origin: top center;
+        transform-origin: top center;
+
+        opacity: 0;
+        // display: none;
+
+
+        -webkit-transform: rotateX(-10deg);
+	    -moz-transform: rotateX(-10deg);
+        -ms-transform: rotateX(-10deg);
+        transform: rotateX(-10deg);
     }
+
 
     .menuContent:after, .menuContent:before {
         bottom: 100%;
@@ -60,6 +101,18 @@
         border-bottom-color: #dfdfdf;
         border-width: 10px;
         margin-left: -10px;
+    }
+}
+
+
+#mainMenuDD1.isVisible  {
+    .menuContent{
+        opacity: 1;
+        display: flex;
+        -webkit-transform: rotateX(0deg);
+	    -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        transform: rotateX(0deg);
     }
 }
 
